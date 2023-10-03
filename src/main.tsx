@@ -8,16 +8,37 @@ const textCollor = "#FFFFFF";
 
 const theme = createTheme({
   typography: {
+    fontFamily: "Comfortaa",
     h3: {
       fontSize: "32px",
-      fontFamily: "Comfortaa",
       fontWeight: 700,
-      lineHeight: "40px",
+      lineHeight: "50px",
       letterSpacing: "0em",
       textAlign: "center",
     },
   },
   components: {
+    MuiOutlinedInput: {
+      styleOverrides: {
+        notchedOutline: {
+          border: "none",
+        },
+        root: {
+          width: "100%",
+          borderRadius: "50px",
+          borderWidth: "1px",
+          borderStyle: "solid",
+          borderColor: "rgba(255, 255, 255, 0.23)",
+          color: textCollor,
+          fontFeatureSettings: "'clig' off, 'liga' off",
+          fontSize: "16px",
+          fontStyle: "normal",
+          fontWeight: "400",
+          lineHeight: "24px",
+          letterSpacing: "0.15px",
+        },
+      },
+    },
     MuiButton: {
       styleOverrides: {
         outlined: {
@@ -26,7 +47,6 @@ const theme = createTheme({
           padding: "10px 16px",
           justifyContent: "center",
           alignItems: "center",
-          fontFamily: "Comfortaa",
           textTransform: "none",
           alignSelf: "stretch",
           borderRadius: "50px",
